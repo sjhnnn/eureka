@@ -1,0 +1,19 @@
+stages:
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: maven:v1
+      shellScript: mvn clean package
+- name: publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: sjhnnn/demo:v3
+      pushRemote: true
+      registry: index.docker.io
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
