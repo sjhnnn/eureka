@@ -1,0 +1,12 @@
+stages:
+- name: build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: myproject
+      pushRemote: true
+      registry: index.docker.io
+    env:
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"  
