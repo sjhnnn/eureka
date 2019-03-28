@@ -8,7 +8,7 @@ stages:
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
-      tag: sjhnnn/demo:v3
+      tag: eureka
       registry: index.docker.io
 - name: deploy
   steps:
