@@ -11,7 +11,7 @@ stages:
       buildContext: .
       tag: sjhnnn/eureka:v3
       pushRemote: true
-      registry: registry.cn-beijing.aliyuncs.com/shijinhao/dev
+      registry: 59.110.228.41:8999
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
