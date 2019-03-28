@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: eureka
-        image: 	registry.cn-beijing.aliyuncs.com/shijinhao/dev/eureka:v3
+        image: 		59.110.228.41:8999/library/eureka:v3
         ports:
         - containerPort: 18090
 
