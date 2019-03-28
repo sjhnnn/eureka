@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: eureka
-        image: 59.110.228.41:8999/library/eureka:v3
+        image: http://59.110.228.41:8999/library/eureka:v3
         ports:
         - containerPort: 18090
 
