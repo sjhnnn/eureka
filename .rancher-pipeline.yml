@@ -8,7 +8,7 @@ stages:
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
-      tag: sjhnnn/eureka
+      tag: sjhnnn/eureka:v3
       pushRemote: true
       registry: index.docker.io
 - name: deploy
