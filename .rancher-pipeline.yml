@@ -8,11 +8,18 @@ stages:
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
+      buildContext: .
       tag: sjhnnn/eureka:v3
       pushRemote: true
-      registry: index.docker.io
+      registry: DockerHub
+    env:
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"
 - name: deploy
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
 timeout: 60
+branch:
+  include:
+  - master
