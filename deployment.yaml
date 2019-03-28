@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: eureka
-        image: DockerHub/sjh/eureka:v3
+        image: 127.0.0.1:34701/sjh/eureka:v3
         ports:
         - containerPort: 18090
 
