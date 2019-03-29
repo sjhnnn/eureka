@@ -10,8 +10,10 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: eureka-greenhouse:${CICD_EUREKA_SEQUENCE}
-      registry: index.docker.io
+      pushRemote: true
+      registry: registry.cn-beijing.aliyuncs.com
 - name: deploy
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+timeout: 60
