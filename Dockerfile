@@ -1,4 +1,4 @@
-FROM 59.110.228.41:3443/library/java:8
+FROM java
 
 MAINTAINER admin
 ADD target/eureka-0.0.1-SNAPSHOT.jar /app.jar
