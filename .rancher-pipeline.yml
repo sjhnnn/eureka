@@ -9,8 +9,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: sjhnnn/eureka:v3
-      pushRemote: true
+      tag: eureka-greenhouse:${CICD_EUREKA_SEQUENCE}
       registry: http://59.110.228.41:8999/
     env:
       PLUGIN_DEBUG: "true"
