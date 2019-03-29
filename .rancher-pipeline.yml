@@ -9,7 +9,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: library/eureka:v3
+      tag: library/demo:v3
       pushRemote: true
       registry: 59.110.228.41
     env:
