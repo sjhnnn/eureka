@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: eureka
-        image: http://59.110.228.41:8999/library/eureka:v3
+        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 18090
 
