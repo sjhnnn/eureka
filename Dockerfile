@@ -1,6 +1,6 @@
-FROM jdk
+FROM openjdk:8-jdk-slim
 
-MAINTAINER admin
+WORKDIR /opt
 ADD target/eureka-0.0.1-SNAPSHOT.jar /app.jar
 
 EXPOSE 18090
