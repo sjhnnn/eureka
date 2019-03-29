@@ -10,15 +10,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: eureka-greenhouse:${CICD_EUREKA_SEQUENCE}
-      registry: 59.110.228.41:3443
-    env:
-      PLUGIN_DEBUG: "true"
-      PLUGIN_INSECURE: "true"
 - name: deploy
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
-timeout: 60
-branch:
-  include:
-  - master
