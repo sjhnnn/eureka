@@ -9,11 +9,17 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: eureka-greenhouse:${CICD_EUREKA_SEQUENCE}
+      tag: library/eureka:v3
       pushRemote: true
-      registry: registry.cn-beijing.aliyuncs.com
+      registry: 59.110.228.41
+    env:
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"
 - name: deploy
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
 timeout: 60
+branch:
+  include:
+  - master
