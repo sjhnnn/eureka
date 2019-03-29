@@ -10,6 +10,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: eureka-greenhouse:${CICD_EUREKA_SEQUENCE}
+      registry: index.docker.io
 - name: deploy
   steps:
   - applyYamlConfig:
