@@ -4,4 +4,4 @@ MAINTAINER admin
 ADD target/eureka-0.0.1-SNAPSHOT.jar /app.jar
  
 EXPOSE 18090
-ENTRYPOINT ["java","-jar","target/eureka-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
