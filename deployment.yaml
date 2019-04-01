@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: demo
-        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        image: demo:v3
         ports:
         - containerPort: 18090
 
