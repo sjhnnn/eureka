@@ -10,14 +10,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: demo:v3
-    env:
-      PLUGIN_DEBUG: "true"
-      PLUGIN_INSECURE: "true"
 - name: deploy
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
-timeout: 60
-branch:
-  include:
-  - master
