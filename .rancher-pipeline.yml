@@ -10,6 +10,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: library/demo:v3
+      registry: 59.110.228.41
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
