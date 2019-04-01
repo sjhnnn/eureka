@@ -9,8 +9,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: library/demo:v3
-      registry: 59.110.228.41
+      tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
