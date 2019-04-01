@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: demo
-        image: 59.110.228.41/library/demo:v3
+        image: library/demo:v3
         ports:
         - containerPort: 18090
 
