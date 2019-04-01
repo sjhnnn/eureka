@@ -9,7 +9,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
+      tag: demo:v3
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
