@@ -3,7 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: maven:3.6.0
-      shellScript: mvn clean package
+      shellScript: mvn package
 - name: publish
   steps:
   - publishImageConfig:
