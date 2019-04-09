@@ -62,5 +62,29 @@
             </plugin>
         </plugins>
     </build>
+        <repositories>
+        <repository>
+             <id>maven-releases/</id>
+             <url>http://39.97.102.126:32702/repository/maven-releases/</url>
+        </repository> 
+    </repositories>
+    
+    <pluginRepositories>
+        <pluginRepository>
+             <id>maven-releases/</id>
+             <url>http://39.97.102.126:32702/repository/maven-releases/</url>
+        </pluginRepository> 
+    </pluginRepositories>
+         
+    <distributionManagement>
+        <snapshotRepository>
+             <id>maven-releases/</id>
+             <url>http://39.97.102.126:32702/repository/maven-releases/</url>
+        </snapshotRepository> 
+        <repository>
+             <id>maven-releases/</id>
+             <url>http://39.97.102.126:32702/repository/maven-releases/</url>
+        </repository> 
+    </distributionManagement>
          
 </project>
