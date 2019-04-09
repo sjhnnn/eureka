@@ -10,8 +10,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: sjhnnn/demo:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
-      registry: registry.cn-beijing.aliyuncs.com
 - name: deploy
   steps:
   - applyYamlConfig:
