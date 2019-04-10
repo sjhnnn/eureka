@@ -28,4 +28,4 @@ spec:
   ports:
   - protocol: TCP
     port: 18090
-    targetPort: 18090
+    targetPort: 18091
