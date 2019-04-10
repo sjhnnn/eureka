@@ -14,12 +14,6 @@ stages:
       registry: registry-vpc.cn-beijing.aliyuncs.com
 - name: deploy
   steps:
-  - runScriptConfig:
-      image: gcc:latest
-      shellScript: |-
-        curl -k -u token-zcgsp:****************************************** \
-        -X PUT \
-        -H 'Accept: application/json' \
-        -H 'Content-Type: application/json' \
-        -d '{"containers":[{"image":"registry-vpc.cn-beijing.aliyuncs.com/sjhnnn/demo:'${CICD_EXECUTION_SEQUENCE}'","name":"snc-backed"}]}'
+  - applyYamlConfig:
+      path: ./deployment.yaml
 timeout: 60
