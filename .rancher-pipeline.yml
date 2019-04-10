@@ -14,6 +14,12 @@ stages:
       registry: registry-vpc.cn-beijing.aliyuncs.com
 - name: deploy
   steps:
-  - applyYamlConfig:
-      path: ./deployment.yaml
+  - runScriptConfig:
+      image: gcc:latest
+      shellScript: |-
+        curl -k -u token-zcgsp:****************************************** \
+        -X PUT \
+        -H 'Accept: application/json' \
+        -H 'Content-Type: application/json' \
+        -d '{"containers":[{"image":"harbor.bluemoon.com.cn/rancher/buying-center-parent:'${CICD_EXECUTION_SEQUENCE}'","name":"snc-backed"}]}'
 timeout: 60
