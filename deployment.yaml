@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: demo
-        image: sjhnnn/demo:${CICD_EXECUTION_SEQUENCE}
+        image: registry-vpc.cn-beijing.aliyuncs.com/sjhnnn/demo:${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 18090
 
