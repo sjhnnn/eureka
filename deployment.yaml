@@ -14,7 +14,7 @@ spec:
       - name: demo
         image: registry-vpc.cn-beijing.aliyuncs.com/sjhnnn/demo:${CICD_EXECUTION_SEQUENCE}
         ports:
-        - containerPort: 18090
+        - containerPort: 9000
 
 ---
 apiVersion: v1
@@ -27,5 +27,5 @@ spec:
     app: demo
   ports:
   - protocol: TCP
-    port: 18090
-    targetPort: 18091
+    port: 9000
+    targetPort: 9000
