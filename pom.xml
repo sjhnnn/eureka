@@ -70,22 +70,19 @@
         </repository> 
     </repositories>
     
-    <pluginRepositories>
-        <pluginRepository>
-             <id>maven-releases/</id>
-             <url>http://39.97.114.141:30126/repository/maven-releases/</url>
-        </pluginRepository> 
-    </pluginRepositories>
-         
-    <distributionManagement>
-        <snapshotRepository>
-             <id>maven-releases/</id>
-             <url>http://39.97.114.141:30126/repository/maven-releases/</url>
-        </snapshotRepository> 
+    <repositories><!-- 代码库 -->
         <repository>
-             <id>maven-releases/</id>
-             <url>http://39.97.114.141:30126/repository/maven-releases/</url>
-        </repository> 
-    </distributionManagement>         
+            <id>maven-ali</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public//</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
          
 </project>
