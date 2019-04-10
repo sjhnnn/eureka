@@ -21,5 +21,5 @@ stages:
         -X PUT \
         -H 'Accept: application/json' \
         -H 'Content-Type: application/json' \
-        -d '{"containers":[{"image":"harbor.bluemoon.com.cn/rancher/buying-center-parent:'${CICD_EXECUTION_SEQUENCE}'","name":"snc-backed"}]}'
+        -d '{"containers":[{"image":"registry-vpc.cn-beijing.aliyuncs.com/sjhnnn/demo:'${CICD_EXECUTION_SEQUENCE}'","name":"snc-backed"}]}'
 timeout: 60
