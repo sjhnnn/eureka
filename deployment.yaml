@@ -22,11 +22,11 @@ kind: Service
 metadata:
   name: demo-svc
 spec:
-  type: NodePort
+  type: NodePort  #这里代表是NodePort类型的
   selector:
-    app: demo
+    app: demo  #这里选择器一定要选择容器的标签
   ports:
   - protocol: TCP
-    port: 9000
-    targetPort: 9000
-    nodePort: 30090
+    port: 9000  #这里的端口,供内部访问。
+    targetPort: 9000  #端口一定要和container暴露出来的端口对应
+    nodePort: 30090  # 所有的节点都会开放此端口，此端口供外部调用。泛微必须是：30000-32767
