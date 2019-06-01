@@ -14,7 +14,7 @@ spec:
       - name: demo
         image: 192.168.0.145:30150/eureka:1.0
         ports:
-        - containerPort: 9000
+        - containerPort: 30006
 
 ---
 apiVersion: v1
@@ -27,6 +27,6 @@ spec:
     app: demo  #这里选择器一定要选择容器的标签
   ports:
   - protocol: TCP
-    port: 9000  #这里的端口,供内部访问。
-    targetPort: 9000  #端口一定要和container暴露出来的端口对应
+    port: 30006  #这里的端口,供内部访问。
+    targetPort: 30006  #端口一定要和container暴露出来的端口对应
     nodePort: 30006  # 所有的节点都会开放此端口，此端口供外部调用。泛微必须是：30000-32767
