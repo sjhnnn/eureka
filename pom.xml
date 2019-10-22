@@ -55,8 +55,8 @@
     </dependencyManagement>
 
     <build>
+       <defaultGoal>compile</defaultGoal>
         <plugins>
-            <defaultGoal>compile</defaultGoal>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
