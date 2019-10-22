@@ -55,22 +55,23 @@
     </dependencyManagement>
 
     <build>
-       <defaultGoal>compile</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>        
-                <artifactId>findbugs-maven-plugin</artifactId>        
-                <version>3.0.1</version>
-                <configuration>        
-                  <findbugsXmlOutput>true</findbugsXmlOutput>        
-                  <findbugsXmlWithMessages>true</findbugsXmlWithMessages>        
-                  <xmlOutput>true</xmlOutput>        
-                </configuration>        
-           </plugin>
+           <plugin>
+                  <groupId>org.codehaus.mojo</groupId>
+                  <artifactId>findbugs-maven-plugin</artifactId>
+                  <version>3.0.1</version>
+                  <configuration>
+                  <xmlOutput>true</xmlOutput>
+                  <!-- Optional directoryto put findbugs xdoc xml report -->
+                  <!--<xmlOutputDirectory>target/site</xmlOutputDirectory>-->
+                  <findbugsXmlOutput>true</findbugsXmlOutput>
+                  <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+                  </configuration>
+            </plugin>
         </plugins>
     </build>
     
